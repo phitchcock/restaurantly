@@ -14,6 +14,7 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'friendly_id'
 
 
 

@@ -17,7 +17,9 @@
 
 <div>
   <% @restaurant.reviews.each do |review| %>
-    <p><%= review.body %></p>
+    <p><%= review.body %>
+      <span class="pull-right"><%= review.user.email %></span>
+    </p>
   <% end %>
 </div>
 

@@ -1,4 +1,8 @@
 class Category < ActiveRecord::Base
-  has_many :restaurants
+  extend FriendlyId
+
+  has_many :restaurants, dependent: :destroy
   validates :title, presence: true
+
+  friendly_id :title, use: :history
 end

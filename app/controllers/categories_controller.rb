@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.friendly.all
   end
 
   def show
@@ -52,7 +52,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.friendly.find(params[:id])
   end
 
 end
