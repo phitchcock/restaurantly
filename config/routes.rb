@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "categories#index"
+  root "pages#index"
+  
   resources :categories do
     resources :restaurants
   end
