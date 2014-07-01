@@ -16,3 +16,6 @@
  *= require grayscale
  *= require_self
  */
+.pad {
+  padding-top: 75px;
+}

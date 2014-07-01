@@ -6,11 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  
+  <%= render 'shared/nav' %>
   <%= render 'shared/flash' %>
-
-<%= yield %>
+  
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

@@ -1,10 +1,10 @@
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse" role="navigation">
   <div class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
           <i class="fa fa-bars"></i>
       </button>
-      <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= link_to categories_path, class: 'navbar-brand' do %>
         <i class="fa fa-play-circle"></i>  <span class="light">Restaurantly</span>
       <% end %>
     </div>
@@ -18,11 +18,11 @@
         </li>
         <% if user_signed_in? %>
         <li class="page-scroll">
-          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
         </li>
         <% else %>
         <li class="page-scroll">
-          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: 'btn btn-primary' %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
         </li>
         <% end %>
     </ul>
@@ -31,21 +31,3 @@
   </div>
   <!-- /.container -->
 </nav>
-
-<section class="intro">
-  <div class="intro-body">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1 class="brand-heading">Restaurantly</h1>
-          <p class="intro-text">A free, premium quality, responsive one page Bootstrap theme created by Start Bootstrap.</p>
-        </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-

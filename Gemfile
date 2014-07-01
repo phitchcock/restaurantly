@@ -12,6 +12,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'figaro'
+
 
 
 group :development do 
