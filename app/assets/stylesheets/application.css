@@ -25,3 +25,15 @@ hr {
   border: 1 px solid #28c3ab; 
   border-top: 1px solid #28c3ab;
 }
+
+.category-content {
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+.thumbnail{
+    position:relative;
+
+}
+

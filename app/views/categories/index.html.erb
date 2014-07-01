@@ -1,12 +1,21 @@
+<br>
+<br>
 <div class="row pad">
-  <div class="col-md-3">
-    <h3>Categories</h3>
-    <% @categories.each do |category| %>
-      <p class="well"><%= link_to category.title, category %></p>
-    <% end %>
+  <div class="col-md-6 text-center">
+    <h3>Discover the best spots</h3>
   </div>
-  <h3>Ratings</h3>
-  <div class="col-md-9">
+  <div class="col-md-6 text-center">
+    <h3>Select a Cateogry Below</h3>
   </div>
+</div>
+<div class="row">
+  <% @categories.each do |category| %>
+  <div class="col-md-3 thumbnail">
+    <%= image_tag 'http://placehold.it/300x300' %>
+      <div class="caption category-content">
+        <%= link_to category.title, category %>
+      </div>
+  </div>
+  <% end %>
 </div>
 

@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to root_path, notice: "#{@category.title} was created"
+      redirect_to categories_path, notice: "#{@category.title} was created"
     else
       flash[:error] = "Catory was not saved, please try again"
       render :new

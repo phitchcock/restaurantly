@@ -1,5 +1,5 @@
 <div class="pad">
-  <h1><%= @restaurant.name %></h1>
+  <h1><%= @restaurant.name %> <small><%= link_to @category.title, @category %></small>  </h1>
   <h3><%= @restaurant.reviews.count %> Reviews</h3>
 </div>
 
