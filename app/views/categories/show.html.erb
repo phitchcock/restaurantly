@@ -1,1 +1,28 @@
-<h1><%= @category.title %></h1>
+<div class="row pad">
+  <div>
+    <h3><%= @category.title %> <span class="pull-right"><%= link_to 'Add Restaurant', new_category_restaurant_path(@category), class: 'btn btn-primary' %></span> </h3>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="row">
+  <% @category.restaurants.each do |restaurant| %>
+  <div class="col-md-9">
+    <div class="media">
+      <%= image_tag 'http://placehold.it/64x64', class: 'media-object thumbnail pull-left' %>
+      <span class="pull-right">
+        <p>Address</p>
+        <p>Phone</p>
+      </span>
+      <div class="media-body">
+        <h4 class="media-heading"><%= link_to restaurant.name, category_restaurant_path(@category, restaurant) %></h4>
+        <p>Comment Count</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <br>
+  <% end %>
+</div>

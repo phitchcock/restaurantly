@@ -3,10 +3,6 @@ class RestaurantsController < ApplicationController
   before_action :set_category
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @restaurants = Restaurant.all
-  end
-
   def show
   end
 
@@ -18,7 +14,7 @@ class RestaurantsController < ApplicationController
     @restaurant = @category.restaurants.build(restaurant_params)
 
     if @restaurant.save
-      redirect_to category_restaurants_path, notice: "#{@restaurant.name} was added"
+      redirect_to [@category, @restaurant], notice: "#{@restaurant.name} was added"
     else
       flash[:error] = "Restaurant was not added please try again"
       render :new

@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   #end
   
   resources :categories do
-    resources :restaurants
+    resources :restaurants, except: [:index]
   end
 end

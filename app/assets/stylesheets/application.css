@@ -19,3 +19,9 @@
 .pad {
   padding-top: 75px;
 }
+
+hr {
+  height: 1px;
+  border: 1 px solid #28c3ab; 
+  border-top: 1px solid #28c3ab;
+}

@@ -1,5 +1,7 @@
 <h1>Index</h1>
 
-<% @restaurants.each do |restaurant| %>
-  <p><%= restaurant.name %></p>
-<% end %>
+<div class="pad">
+  <% @restaurants.each do |restaurant| %>
+    <p><%= link_to restaurant.name, [@category, restaurant] %></p>
+  <% end %>
+</div>
