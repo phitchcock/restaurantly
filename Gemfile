@@ -8,6 +8,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+# Added Gems
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+
 
 group :development do 
   gem 'spring'
