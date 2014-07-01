@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 # Added Gems
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'devise'
 
 
 group :development do 
