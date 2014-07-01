@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   #end
   
   resources :categories do
-    resources :restaurants, except: [:index]
+    resources :restaurants, except: [:index] do
+      resources :reviews, only: [:create]
+    end
   end
 end

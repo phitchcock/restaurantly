@@ -18,7 +18,7 @@
       </span>
       <div class="media-body">
         <h4 class="media-heading"><%= link_to restaurant.name, category_restaurant_path(@category, restaurant) %></h4>
-        <p>Comment Count</p>
+        <p><%= restaurant.reviews.count %> Reviews</p>
       </div>
     </div>
     <hr>

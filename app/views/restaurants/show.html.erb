@@ -1,4 +1,23 @@
 <div class="pad">
   <h1><%= @restaurant.name %></h1>
+  <h3><%= @restaurant.reviews.count %> Reviews</h3>
+</div>
+
+<div>
+  <h3>Comments</h3>
+  <%= form_for([@category, @restaurant, @review]) do |f| %>
+    <div class="form-group">
+      <%= f.text_area :body %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <% @restaurant.reviews.each do |review| %>
+    <p><%= review.body %></p>
+  <% end %>
 </div>
 
