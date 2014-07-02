@@ -15,6 +15,9 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'friendly_id'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 
 

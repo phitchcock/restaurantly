@@ -11,7 +11,7 @@
 <div class="row">
   <% @categories.each do |category| %>
   <div class="col-md-3 thumbnail">
-    <%= image_tag 'http://placehold.it/300x300' %>
+    <%= image_tag(category.category_image.large.url) %>
       <div class="caption category-content">
         <%= link_to category.title, category %>
       </div>

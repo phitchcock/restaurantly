@@ -5,4 +5,6 @@ class Category < ActiveRecord::Base
   validates :title, presence: true
 
   friendly_id :title, use: :history
+
+  mount_uploader :category_image, CategoryImageUploader
 end
