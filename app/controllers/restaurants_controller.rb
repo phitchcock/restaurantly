@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_category
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 

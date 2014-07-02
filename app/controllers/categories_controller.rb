@@ -1,9 +1,12 @@
 class CategoriesController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  #after_action :verify_authorized
 
   def index
-    @categories = Category.friendly.all
+    @categories = Category.friendly.order('title ASC').all
+    #authorize @categories
   end
 
   def show

@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+  
   def create
     @category = Category.friendly.find(params[:category_id])
     @restaurant = Restaurant.friendly.find(params[:restaurant_id])
